@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!-- Main/Manifest -->
+    <string name="desc">XQuotes</string>
+    <string name="app_name">XQuotes</string>
+    <string name="quotes_activity">Quotes</string>
+    <string name="author_activity">Authors</string>
+    <string name="donate_activity">Donate</string>
+    <string name="author_info_activity">Author Information</string>
+    <string name="fav_activity">Favorite Quotes</string>
+    
+    
+    <!-- XQuotesActivity -->
+    <string name="qotd_heading">Quote Of The Day</string>
+	<string name="quotes_label">Quotes</string>
+	<string name="author_label">Authors</string>
+	<string name="fav_label">Favorites</string>
+	<string name="categories_label">Categories</string>
+	<string name="settings_label">Settings</string>
+	<string name="feedback_label">Feedback</string>
+	
+	<!-- Quotes_Activity -->
+	<string name="no_data">No Data</string>
+	
+	<!-- Donate_Activity -->
+	<string name="beer">If you love xQuotes, donate to buy me a beer.\n\n-xQuotes Developer</string>
+	<string name="exit_donate">EXIT and continue browsing xQuotes....</string>
+	<string name="connecting_to_paypal">Connecting to PayPal Servers. \n\nPlease Wait..</string>
+	<string name="donate_hint">Enter Donation Amount ..</string>
+	<string name="dollars">US Dollars</string>
+	
+	<!-- Author_Info_Activity -->
+
+	<string name="profession"><u>Profession</u></string>
+	<string name="about">About:</string>
+	<string name="mark_fav">&#160;&#160;FAV&#160;&#160;</string>
+	<string name="mark_ban">&#160;&#160;BAN&#160;&#160;</string>
+	
+	
+</resources>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" 
+    android:background="@drawable/rainbg"
+    android:padding="5dip">
+
+    <ImageView android:id="@+id/xq_heading_1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/desc"
+        android:src="@drawable/xq_head"
+        android:adjustViewBounds="true"
+        android:gravity="center_vertical|center_horizontal"
+        />
+
+    <HorizontalScrollView 
+        		android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+        <LinearLayout android:orientation="horizontal"
+            	android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+            
+        </LinearLayout>
+    </HorizontalScrollView>
+    <ListView android:id="@+id/list"
+               android:layout_width="fill_parent"
+               android:layout_height="wrap_content"
+               android:divider="@drawable/y_sep_h"
+               android:padding="15dip"
+               android:cacheColorHint="#00000000"
+               />
+
+ </LinearLayout>

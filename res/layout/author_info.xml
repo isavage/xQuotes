@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" 
+    android:background="@drawable/rainbg"
+    android:padding="5dip"
+    >
+
+<ImageView 
+        android:id="@+id/xq_head"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/desc"
+        android:src="@drawable/xq_head"
+        android:adjustViewBounds="true"
+        android:gravity="center_vertical|center_horizontal"
+        />
+<ScrollView 
+    android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/xq_head">
+<LinearLayout
+    android:id="@+id/author_info_wrap"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_margin="3dip"
+    >
+    
+   
+	<ImageView
+   	 	    android:id="@+id/img_author"
+   	 	    android:layout_width="fill_parent"
+   	 	    android:layout_height="100dip"
+   	 	    android:adjustViewBounds="true"
+   	 	    android:paddingTop="5dip"
+   	 	    android:contentDescription="@string/desc"
+   	 	    android:gravity="center_horizontal|center_vertical"
+   	 	    />
+	     <TextView
+            android:id="@+id/name"
+        	android:layout_width="fill_parent"
+        	android:layout_height="wrap_content"
+        	android:textSize="14dip"
+        	android:textColor="@color/author"
+        	android:gravity="center_horizontal|center_vertical"
+        	/>
+          <TextView
+            android:id="@+id/born"
+        	android:layout_width="fill_parent"
+        	android:layout_height="wrap_content"
+        	android:textSize="13dip"
+        	android:textColor="@color/quote"
+        	android:gravity="center_horizontal|center_vertical"
+        	/>
+        <TextView
+            android:id="@+id/profession"
+        	android:layout_width="fill_parent"
+        	android:layout_height="wrap_content"
+        	android:textSize="13dip"
+        	android:textColor="@color/author"
+        	android:gravity="center_horizontal|center_vertical"
+        	/>
+		   
+    	<Button
+    	    android:id="@+id/browse_quotes"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:textStyle="bold"
+        	android:textSize="14dip"
+        	android:textColor="@color/Black"
+        	android:contentDescription="@string/desc"
+        	android:gravity="center_horizontal|center_vertical"
+        	android:text="@string/about"
+        	android:layout_gravity="center_horizontal|center_vertical"
+        	android:onClick="getAuthorQuotes"
+        	android:layout_marginTop="5dip"
+			/>
+  		
+         
+	<RelativeLayout 
+		    android:id="@+id/border_layout"
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:background="@layout/border_round"
+		    android:orientation="vertical"
+		    android:layout_margin="10dip"
+		    android:padding="5dip">
+		   
+    	<TextView
+    	    android:id="@+id/about_head"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:textStyle="bold"
+        	android:textSize="13dip"
+        	android:textColor="@color/author"
+        	android:text="@string/about"
+        	/>
+   	 	<TextView
+        android:id= "@+id/about"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="13dip"
+        android:textColor="@color/quote"
+        android:layout_below="@id/about_head"
+        />
+   	 	<TextView
+        android:id= "@+id/more_info"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="13dip"
+        android:contentDescription="@string/desc"
+        android:gravity="right"
+        android:padding="5dip"
+        android:textColorLink="@color/author"
+        android:layout_below="@id/about"
+        android:clickable="true"
+        />
+   	 	
+	</RelativeLayout>
+  		
+</LinearLayout>
+</ScrollView>
+</RelativeLayout>

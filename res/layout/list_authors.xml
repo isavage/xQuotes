@@ -1,0 +1,27 @@
+<RelativeLayout  
+    android:id="@+id/relativeLayout1"  
+    android:layout_width="fill_parent"  
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"  
+    android:padding="5dip">  
+    
+     <ImageView 
+         	   android:id="@+id/item_author_img"
+               android:layout_width="80dip"
+			   android:layout_height="60dip"
+			   android:contentDescription="@string/desc"
+			   android:adjustViewBounds="true"
+               android:layout_alignParentLeft="true"
+               android:textColor="@color/author"
+               />
+	<TextView android:id="@+id/item_author_name"
+               android:layout_width="wrap_content"
+               android:layout_height="60dip"
+               android:textColor="@color/author"
+               android:gravity="center_vertical"
+               android:layout_toRightOf="@id/item_author_img"
+               />
+	
+   
+</RelativeLayout>
+ 

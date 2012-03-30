@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="vrs.eulogia.xquotes"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk android:minSdkVersion="10" />
+    
+    <uses-permission android:name="android.permission.INTERNET"/>
+	<uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+
+    <application
+        android:name="vrs.eulogia.xquotes.xQuotes"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name" >
+        <activity
+            android:name=".XQuotesActivity"
+            android:label="@string/app_name" 
+            android:theme="@android:style/Theme.NoTitleBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Quotes_Activity"
+            android:label="@string/quotes_activity" 
+            android:theme="@android:style/Theme.NoTitleBar">
+        </activity>
+        <activity
+            android:name=".Author_Activity"
+            android:label="@string/author_activity" 
+            android:theme="@android:style/Theme.NoTitleBar">
+        </activity>
+        <activity
+            android:name=".Author_Info_Activity"
+            android:label="@string/author_info_activity" 
+            android:theme="@android:style/Theme.NoTitleBar">
+        </activity>
+        <activity
+            android:name=".Fav_Activity"
+            android:label="@string/fav_activity" 
+            android:theme="@android:style/Theme.NoTitleBar">
+        </activity>
+        <activity android:name=".Donate_Activity"
+                  android:label="@string/donate_activity"
+                  android:theme="@android:style/Theme.NoTitleBar"
+                  android:configChanges="keyboardHidden|orientation">
+        </activity>		
+        <activity android:name="com.paypal.android.MEP.PayPalActivity"
+			android:theme="@android:style/Theme.Translucent.NoTitleBar"
+			android:configChanges="keyboardHidden|orientation" />
+       
+    </application>
+    
+</manifest>

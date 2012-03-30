@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" 
+    android:padding="5dip"
+    android:background="@drawable/rainbg"
+    >
+
+<ImageView 
+        android:id="@+id/xq_head"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/desc"
+        android:src="@drawable/xq_head"
+        android:adjustViewBounds="true"
+        android:gravity="center_vertical|center_horizontal"
+        />
+<ScrollView 
+    android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/xq_head">
+<RelativeLayout 
+    android:id="@+id/scroll_child"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+<RelativeLayout 
+    android:id="@+id/border_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@layout/border_round"
+    android:orientation="vertical"
+    android:layout_margin="10dip"
+    android:padding="5dip">
+    
+    <TextView
+        android:id= "@+id/qotd_heading"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12dip"
+        android:text="@string/qotd_heading"
+        android:textColor="@color/Black"
+        android:gravity="center_vertical|center_horizontal"
+        />
+    
+<LinearLayout
+    android:id="@+id/anim_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_below="@id/qotd_heading"
+    android:layout_margin="3dip"
+    >
+    	
+        <ImageView 
+        android:id="@+id/qotd_img"
+        android:layout_width="fill_parent"
+        android:layout_height="60dip"
+        android:contentDescription="@string/desc"
+        android:adjustViewBounds="true"
+        android:gravity="center_vertical|center_horizontal"
+        />
+   	 	<TextView
+        android:id= "@+id/qotd_author"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12dip"
+        android:textColor="@color/author"
+        android:gravity="center_vertical|center_horizontal"
+        />
+  		<vrs.eulogia.xquotes.AutoResizeTextView
+        android:id= "@+id/qotd"
+        android:layout_width="wrap_content"
+        android:layout_height="60dip"
+        android:textColor="@color/quote"
+        android:textSize="14dp"
+        android:gravity="center_vertical|center_horizontal"
+        /> 
+        
+</LinearLayout>
+
+
+<RelativeLayout
+    android:id="@+id/l_layout_btns"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_below="@id/anim_layout"
+    android:layout_margin="5dip"
+    >
+	<ImageView
+   	 	    android:id="@+id/qotd_refresh"
+   	 	    android:layout_width="wrap_content"
+   	 	    android:layout_height="wrap_content"
+   	 	    android:src="@drawable/refresh"
+   	 	    android:onClick="qotdRefresh"
+   	 	    android:contentDescription="@string/desc"
+   	 	    android:layout_centerInParent="true"
+   	 	    />
+</RelativeLayout>
+</RelativeLayout>
+	<TableLayout
+        android:id="@+id/tableLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/border_layout"
+        android:padding="10dip"
+        >
+		
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" 
+            android:gravity="center_horizontal">
+            <TextView
+        	android:id= "@+id/quotes_label"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:textSize="12dip"
+        	android:textColor="@color/author"
+        	android:gravity="center_vertical|center_horizontal"
+        	android:text="@string/quotes_label"
+        	android:padding="7dip"
+        	android:drawableTop="@drawable/quotes"
+        	android:onClick="label_clicked"
+        	android:clickable="true"
+        	/>
+            <ImageView 
+                android:id="@+id/sep_1"
+                android:contentDescription="@string/desc"
+                android:src="@drawable/y_sep_v"
+                android:padding="7dip"
+                android:gravity="center_vertical|center_horizontal"
+                />
+            <TextView
+        	android:id= "@+id/author_label"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:textSize="12dip"
+        	android:textColor="@color/author"
+        	android:gravity="center_vertical|center_horizontal"
+        	android:text="@string/author_label"
+        	android:padding="7dip"
+        	android:drawableTop="@drawable/author"
+        	android:onClick="label_clicked"
+        	android:clickable="true"
+        	/>
+            <ImageView 
+                android:id="@+id/sep_2"
+                android:contentDescription="@string/desc"
+                android:src="@drawable/y_sep_v"
+                android:padding="7dip"
+                android:gravity="center_vertical|center_horizontal"
+                />
+            <TextView
+        	android:id= "@+id/fav_label"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:textSize="12dip"
+        	android:textColor="@color/author"
+        	android:gravity="center_vertical|center_horizontal"
+        	android:text="@string/fav_label"
+        	android:padding="7dip"
+        	android:drawableTop="@drawable/fav"
+        	android:onClick="label_clicked"
+        	android:clickable="true"
+        	/>
+                       
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal" >
+        	<ImageView 
+                android:id="@+id/sep_3"
+                android:contentDescription="@string/desc"
+                android:src="@drawable/y_sep_h"
+                android:gravity="center_vertical|center_horizontal"
+                />
+        	
+        </TableRow>
+        
+        <TableRow
+            android:id="@+id/tableRow3"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal" >
+        	
+            <TextView
+        	android:id= "@+id/categories_label"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:textSize="12dip"
+        	android:textColor="@color/author"
+        	android:gravity="center_vertical|center_horizontal"
+        	android:text="@string/categories_label"
+        	android:padding="7dip"
+        	android:drawableTop="@drawable/tag"
+        	android:onClick="label_clicked"
+        	android:clickable="true"
+        	/>
+            
+        	<ImageView 
+                android:id="@+id/sep_4"
+                android:contentDescription="@string/desc"
+                android:src="@drawable/y_sep_v"
+                android:padding="7dip"
+                android:gravity="center_vertical|center_horizontal"
+                />
+        	
+        	<TextView
+        	android:id= "@+id/settings_label"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:textSize="12dip"
+        	android:textColor="@color/author"
+        	android:gravity="center_vertical|center_horizontal"
+        	android:text="@string/settings_label"
+        	android:padding="7dip"
+        	android:drawableTop="@drawable/settings"
+        	android:onClick="label_clicked"
+        	android:clickable="true"
+        	/>
+        	
+        	<ImageView 
+                android:id="@+id/sep_5"
+                android:contentDescription="@string/desc"
+                android:src="@drawable/y_sep_v"
+                android:padding="7dip"
+                android:gravity="center_vertical|center_horizontal"
+                />
+        	
+        	<TextView
+        	android:id= "@+id/feedback_label"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:textSize="12dip"
+        	android:textColor="@color/author"
+        	android:gravity="center_vertical|center_horizontal"
+        	android:text="@string/feedback_label"
+        	android:padding="7dip"
+        	android:drawableTop="@drawable/feedback"
+        	android:onClick="label_clicked"
+        	android:clickable="true"
+        	/>
+        </TableRow>
+     
+</TableLayout>
+	
+	<ImageView 
+        android:id="@+id/donate"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/desc"
+        android:src="@drawable/donate"
+        android:adjustViewBounds="true"
+        android:gravity="center_vertical|center_horizontal"
+        android:onClick="donate_clicked"
+        android:layout_below="@id/tableLayout1"
+        android:layout_alignParentBottom="true"
+        />
+	</RelativeLayout>
+	</ScrollView>
+</RelativeLayout>

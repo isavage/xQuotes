@@ -1,0 +1,38 @@
+----- Custom ListActivity ArrayAdapter -------
+	    
+		public class CustomAdapter extends ArrayAdapter<Quote_OBJ>{
+	
+			private ArrayList<Quote_OBJ> objects;
+			
+			
+	        public CustomAdapter(Context context, int textViewResourceId,
+	        		ArrayList<Quote_OBJ> objects) {
+	        	super(context, textViewResourceId, objects);
+	        	this.objects = objects;
+	        	
+	        }
+	
+	        public View getView(int position, View convertView, ViewGroup parent){
+				if(convertView == null){
+				    LayoutInflater inflater = (LayoutInflater) getBaseContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+				    convertView = inflater.inflate(R.layout.quotes, null);
+				}
+				Quote_OBJ qo= objects.get(position);
+				
+				if(convertView != null){
+					ImageView iv = (ImageView)convertView.findViewById(R.id.xq_heading);
+					iv.setVisibility(1);
+				    TextView tv1 = (TextView) convertView.findViewById(R.id.item_quote);
+				    TextView tv2 = (TextView) convertView.findViewById(R.id.item_author);
+				    tv1.setText(qo.getQuote());
+				    tv2.setText(qo.getAuthor());
+				               					               		
+				}
+			 return convertView;
+				
+	        }
+	      
+	    }
+	    
+	    
+	    -----------------------------------

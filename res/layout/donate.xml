@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" 
+    android:background="@drawable/rainbg"
+    android:padding="5dip"
+    >
+
+    <ImageView
+        android:id="@+id/xq_head"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/desc"
+        android:src="@drawable/xq_head"
+        android:adjustViewBounds="true"
+        android:gravity="center_vertical|center_horizontal"
+        />
+  
+    <TextView
+        android:id= "@+id/donate_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="13dip"
+        android:text="@string/beer"
+        android:textColor="@color/quote"
+        android:gravity="center_vertical|center_horizontal"
+        android:padding="15dip"
+        android:drawableTop="@drawable/beer"
+        />
+<RelativeLayout android:id="@+id/amt_wrap"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    >
+   
+    <EditText
+    android:id="@+id/donate_amount"
+    android:layout_width="wrap_content"
+    android:maxLines="1"
+    android:layout_height="wrap_content"
+    android:textColor="@color/quote"
+    android:layout_centerInParent="true"
+    android:inputType="number"
+    android:hint="@string/donate_hint"
+    android:visibility="invisible"
+    android:textSize="12dip"
+    />  
+    
+    <TextView android:id= "@+id/dollars"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="10dip"
+        android:paddingTop="2dip"
+        android:text="@string/dollars"
+        android:gravity="center_vertical|center_horizontal"
+        android:textColor="@color/White"
+        android:visibility="invisible"
+        android:layout_below="@id/donate_amount"/>
+    
+</RelativeLayout>
+     <TextView
+        android:id= "@+id/donate_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="13dip"
+        android:textColor="@color/White"
+        android:gravity="center_vertical|center_horizontal"
+        android:visibility="gone"
+        />
+    <TextView
+        android:id= "@+id/donate_info"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15dip"
+        android:textColor="@color/White"
+        android:textStyle="bold"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="@string/connecting_to_paypal"
+        />
+    <TextView
+        android:id= "@+id/donate_extra"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="13dip"
+        android:textColor="@color/White"
+        android:gravity="center_vertical|center_horizontal"
+        android:visibility="gone"
+        />
+<LinearLayout android:id="@+id/donate_simple"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" 
+    android:padding="10dip"
+    android:gravity="center_vertical|center_horizontal"
+    android:layout_gravity="center">
+    
+</LinearLayout>    
+
+
+<LinearLayout android:id="@+id/donate_exit"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+    
+    <TextView 
+        android:id="@+id/exit"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical|center_horizontal"
+        android:clickable="true"
+        android:drawableTop="@drawable/exit"
+        android:text="@string/exit_donate"
+        android:textSize="12dip"
+        android:textColor="@color/Green"
+        android:padding="20dip"
+        android:onClick="exitApp"
+        />
+    
+</LinearLayout>  
+    
+
+</LinearLayout>
